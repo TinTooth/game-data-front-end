@@ -1,9 +1,13 @@
+import { useState } from "react";
+import SearchBar from "../SearchBar/SearchBar";
 import "./SearchContainer.css";
 
 const SearchContainer = ({data,setGame}) => {
+    const [results, setResults] = useState([]);
+
     return (
         <div className="search-container">
-            test
+            <SearchBar data={data} setGame = {setGame} setResults = {setResults}/>
 
         </div>
       );
