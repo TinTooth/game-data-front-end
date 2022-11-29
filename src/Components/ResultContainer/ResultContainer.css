@@ -1,0 +1,26 @@
+.result-container>* { 
+    flex:1 1 40%;
+    font-size: 30px;
+}
+
+.result {
+    width: 50%;
+    border-bottom: 2px solid gray;
+    padding: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    
+}
+
+.result-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.error {
+    display: flex;
+    justify-content: center;
+}

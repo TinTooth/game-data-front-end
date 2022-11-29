@@ -3,16 +3,24 @@ import "./SearchBar.css"
 
 
 
-const SearchBar = ({data, setResults, setGame}) => {
+const SearchBar = ({data, setResults, setGame, setNoResults}) => {
     const [search, setSearch] = useState("");
 
 
     const handleSubmit = (e) =>{
+        
         e.preventDefault();
         let results = data.filter((game) => {return game.name.toLowerCase().includes(search.toLocaleLowerCase())});
-        let filteredGames =removeDuplicates(results);
-        let sorted = filteredGames.sort((g1, g2) => (g1.name.toLocaleLowerCase() > g2.name.toLocaleLowerCase()) ? 1 : (g1.name.toLocaleLowerCase() < g2.name.toLocaleLowerCase()) ? -1 : 0);
-        setResults(sorted);
+        console.log(results);
+        if (results.length > 0) {
+            let filteredGames = removeDuplicates(results);
+            let sorted = filteredGames.sort((g1, g2) => (g1.name.toLocaleLowerCase() > g2.name.toLocaleLowerCase()) ? 1 : (g1.name.toLocaleLowerCase() < g2.name.toLocaleLowerCase()) ? -1 : 0);
+            (setResults(sorted));
+            }
+        else {
+            setNoResults(true);
+            setResults([]);
+        }
     }
 
     const removeDuplicates = (games) =>{
@@ -27,6 +35,7 @@ const SearchBar = ({data, setResults, setGame}) => {
         setSearch("");
         setGame("");
         setResults([]);
+        setNoResults(false);
     }
 
 

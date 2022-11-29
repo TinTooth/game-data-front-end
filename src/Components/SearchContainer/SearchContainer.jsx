@@ -1,23 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import ResultContainer from "../ResultContainer/ResultContainer";
 import SearchBar from "../SearchBar/SearchBar";
-import SearchResult from "../SearchResult/SearchResult";
+
 import "./SearchContainer.css";
 
 const SearchContainer = ({data,setGame}) => {
     const [results, setResults] = useState([]);
+    const [noResults, setNoResults] = useState([false]);
 
     return (
         <div className="search-container">
-            <SearchBar data={data} setResults = {setResults} setGame = {setGame}/>
-            <div className="result-container">
-                {results.map((game,i) =>{
-                    return(
-                        <div className="result" key = {i}>
-                        <SearchResult game = {game} setGame ={setGame}/>     
-                        </div>
-                    )
-                })}    
-            </div>   
+            <SearchBar data={data} setResults = {setResults} setGame = {setGame} setNoResults = {setNoResults}/>
+            <ResultContainer setGame = {setGame} noResults = {noResults} results = {results}/>
         </div>
       );
 }
