@@ -1,9 +1,9 @@
 import { useState } from "react";
+import "./SearchBar.css"
 
 
 
-
-const SearchBar = ({data, setResults}) => {
+const SearchBar = ({data, setResults, setGame}) => {
     const [search, setSearch] = useState("");
 
 
@@ -16,16 +16,17 @@ const SearchBar = ({data, setResults}) => {
     }
 
     const removeDuplicates = (games) =>{
-    
         const filteredGames = games.filter((game,i,games) => 
         i === games.findIndex((g) => (
-            g.name ===game.name)))
+            g.name === game.name)))
         return filteredGames;
     }
 
 
     const handleClear = () =>{
         setSearch("");
+        setGame("");
+        setResults([]);
     }
 
 
@@ -35,7 +36,9 @@ const SearchBar = ({data, setResults}) => {
             <input type = "text" className="search-input" value={search} onChange ={(e)=> setSearch(e.target.value)} />
             <button type = "submit">Search</button>
         </form>
+       
         <button onClick = {handleClear}>Clear</button>
+       
         </div>
       );
 }

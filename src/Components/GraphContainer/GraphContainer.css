@@ -1,0 +1,8 @@
+.graph-container {
+    width: 75%;
+    background-color: aliceblue;
+    min-height: 10px;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 10px;
+}

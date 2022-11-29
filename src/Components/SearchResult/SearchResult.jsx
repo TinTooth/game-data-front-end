@@ -1,6 +1,6 @@
 const SearchResult = ({game,setGame}) => {
     const handleClick = () => {
-        setGame(game);
+        setGame(game.name);
     }
     
     return ( 

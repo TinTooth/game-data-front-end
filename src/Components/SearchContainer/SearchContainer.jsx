@@ -8,7 +8,7 @@ const SearchContainer = ({data,setGame}) => {
 
     return (
         <div className="search-container">
-            <SearchBar data={data} setResults = {setResults}/>
+            <SearchBar data={data} setResults = {setResults} setGame = {setGame}/>
             <div className="result-container">
                 {results.map((game,i) =>{
                     return(
