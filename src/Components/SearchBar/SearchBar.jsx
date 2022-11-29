@@ -3,12 +3,14 @@ import { useState } from "react";
 
 
 
-const SearchBar = ({data, setGame, setResults}) => {
+const SearchBar = ({data, setResults}) => {
     const [search, setSearch] = useState("");
+
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        setSearch(search);
+        let results = data.filter((game) => {return game.name.toLowerCase().includes(search.toLocaleLowerCase())})
+        setResults(results);
     }
 
     const handleClear = () =>{
