@@ -1,15 +1,14 @@
 import axios from 'axios';
 import './App.css';
-import Footer from './Components/Footer/Footer';
+
 import Header from './Components/Header/Header';
-import { useState, useEffect,useRef } from 'react';
+import { useState, useEffect} from 'react';
 import SearchContainer from './Components/SearchContainer/SearchContainer';
 import GraphContainer from './Components/GraphContainer/GraphContainer';
 
 function App() {
   const [data, setData] = useState();
-  const [game, setGame] = useState(null);
-  const graphRef = useRef();
+  const [game, setGame] = useState("");
 
   useEffect (()=> {
     getData();
@@ -23,8 +22,8 @@ function App() {
   return (
     <div className="App">
      <Header/>
-     <GraphContainer game = {game} data = {data} graphRef = {graphRef}/>
-     <SearchContainer data={data} setGame ={setGame} graphRef = {graphRef}/>
+     <GraphContainer game = {game} data = {data} />
+     <SearchContainer data= {data} setGame ={setGame} />
     </div>
   );
 }

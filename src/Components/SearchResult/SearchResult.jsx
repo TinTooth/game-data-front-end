@@ -1,7 +1,7 @@
-const SearchResult = ({game,setGame,graphRef}) => {
+const SearchResult = ({game,setGame}) => {
     const handleClick = () => {
         setGame(game.name);
-        graphRef.current.scrollIntoView({behavior: 'smooth'})
+        window.scrollTo({top:0,left:0,behavior:"smooth"});
 
     }
     

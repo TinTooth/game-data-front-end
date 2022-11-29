@@ -4,7 +4,7 @@ import SearchBar from "../SearchBar/SearchBar";
 
 import "./SearchContainer.css";
 
-const SearchContainer = ({data,setGame,graphRef}) => {
+const SearchContainer = ({data,setGame}) => {
     const [results, setResults] = useState([]);
     const [noResults, setNoResults] = useState([false]);
     
@@ -12,7 +12,7 @@ const SearchContainer = ({data,setGame,graphRef}) => {
     return (
         <div className="search-container">
             <SearchBar data={data} setResults = {setResults} setGame = {setGame} setNoResults = {setNoResults}/>
-            <ResultContainer setGame = {setGame} noResults = {noResults} results = {results} graphRef = {graphRef}/>
+            <ResultContainer setGame = {setGame} noResults = {noResults} results = {results} />
         </div>
       );
 }

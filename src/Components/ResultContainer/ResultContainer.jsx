@@ -1,7 +1,7 @@
 import "./ResultContainer.css";
 import SearchResult from "../SearchResult/SearchResult";
 
-const ResultContainer = ({results,setGame,noResults,graphRef}) => {
+const ResultContainer = ({results,setGame,noResults}) => {
     console.log(noResults);
     return results.length < 1 && noResults === true ? ( 
     <div className="error"> Sorry No Results from that Search</div>  
@@ -9,7 +9,7 @@ const ResultContainer = ({results,setGame,noResults,graphRef}) => {
         {results.map((game,i) =>{
         return(
             <div className="result" key = {i}>
-            <SearchResult game = {game} setGame ={setGame} graphRef = {graphRef}/>     
+            <SearchResult game = {game} setGame ={setGame}/>     
             </div>
         )
         })}
