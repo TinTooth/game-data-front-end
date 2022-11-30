@@ -1,6 +1,6 @@
 .result-container>* { 
     flex:1 1 40%;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .result {
@@ -10,8 +10,8 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+    align-items: center;
 
-    
 }
 
 .result-container {
@@ -24,3 +24,5 @@
     display: flex;
     justify-content: center;
 }
+
+

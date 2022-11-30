@@ -11,7 +11,6 @@ const SearchBar = ({data, setResults, setGame, setNoResults}) => {
         
         e.preventDefault();
         let results = data.filter((game) => {return game.name.toLowerCase().includes(search.toLocaleLowerCase())});
-        console.log(results);
         if (results.length > 0) {
             let filteredGames = removeDuplicates(results);
             let sorted = filteredGames.sort((g1, g2) => (g1.name.toLocaleLowerCase() > g2.name.toLocaleLowerCase()) ? 1 : (g1.name.toLocaleLowerCase() < g2.name.toLocaleLowerCase()) ? -1 : 0);

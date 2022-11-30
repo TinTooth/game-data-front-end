@@ -44,8 +44,6 @@ const GameGraph = ({game,data}) => {
             osales+=game.othersales;    
         })
 
-
-
         let data = [
             ['Region','Sales'],
             ['NorthAmerica Sales',nasales],
@@ -60,17 +58,28 @@ const GameGraph = ({game,data}) => {
 
 
     const platformOptions = {
-    
         title: "Sales By Platform (millions sold)",
-        fontsize: "25px"
+        backgroundColor: "transparent",
+        colors:["#4e0d0d","#8f1f1f","#292626","#807979","#ab6320","#f08b2e"],
+        fontSize: 15,
+        height: "100%",
+    }
+
+    const regionOptions = {
+        title: "Sales by Region (millions sold)",
+        backgroundColor: "transparent",
+        colors:["#4e0d0d","#8f1f1f","#292626","#807979","#ab6320","#f08b2e"],
+        fontSize: 15,
+        height: "100%",
     }
 
 
     return ( 
-        <>
-        <h2 className="detail">{game.name}</h2>
+        <><div className="title1">
+        {game.name}
+        </div>
         <div className="game-container">
-            <div className="game-details">
+                <div className="game-detail">
                 <p className="detail">Platforms : {getPlatforms()}</p>
                 <p className="detail">Genre : {game.genre}</p>
                 <p className="detail">Publisher : {game.publisher}</p>
@@ -83,7 +92,7 @@ const GameGraph = ({game,data}) => {
             <Chart
                 chartType="PieChart"
                 data = {getSalesRegionData()}
-                options = {{title:"Sales by Region (millions sold)"}}
+                options = {regionOptions}
                 />
 
         </div>

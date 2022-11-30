@@ -7,9 +7,18 @@
     height: 75px;
     margin-bottom: 10px;
     width: 100%;
+    gap: 2%
 }
 
 form {
     display: flex;
     align-items: center;
+}
+
+input {
+    padding: 10px;
+    border: solid 2px #4e0d0d;
+    border-radius: 10px;
+    margin-right:4%;
+    font-weight: bold;
 }

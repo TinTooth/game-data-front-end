@@ -71,6 +71,7 @@ const AllGamesGraphs = ({data}) => {
         height:"250px",
         title: "Global Game Sales in Millions 2013-2016 by Platform",
         colors:["#4E0D0D"],
+        backgroundColor: "transparent",
     }
 
     const publisherOptions = {
@@ -79,6 +80,8 @@ const AllGamesGraphs = ({data}) => {
         title: "Top 10 Publishers Sales Distribution by Consoles 2005-2016",
         isStacked: "true",
         colors:["#4e0d0d","#8f1f1f","#292626","#807979","#ab6320","#f08b2e"],
+        backgroundColor: "transparent",
+        
     }
 
         

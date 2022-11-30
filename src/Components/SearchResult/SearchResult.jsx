@@ -1,3 +1,4 @@
+import "./SearchResult.css"
 const SearchResult = ({game,setGame}) => {
     const handleClick = () => {
         setGame(game);
@@ -6,7 +7,7 @@ const SearchResult = ({game,setGame}) => {
     }
     return ( 
         <>
-        <div> {game.name}</div>
+        <div className="title"> {game.name}</div>
         <button onClick ={handleClick}>See Details</button>
         </>
     );

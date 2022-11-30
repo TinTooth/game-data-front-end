@@ -5,3 +5,19 @@
   flex-direction: column;
   align-items: center;
 }
+
+button {
+  background-color: #4e0d0d;
+  border: none;
+  border-radius: 10px;
+  color:aliceblue;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  border: solid 2px #4e0d0d;
+}
+
+button:hover {
+  background-color: aliceblue;
+  color: #4e0d0d;
+}
