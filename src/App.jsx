@@ -7,7 +7,7 @@ import SearchContainer from './Components/SearchContainer/SearchContainer';
 import GraphContainer from './Components/GraphContainer/GraphContainer';
 
 function App() {
-  const [data, setData] = useState();
+  const [data, setData] = useState([]);
   const [game, setGame] = useState("");
 
   useEffect (()=> {

@@ -1,6 +1,6 @@
 const GameGraph = ({game,data}) => {
     return ( 
-        game
+        game.name
      );
 }
  
