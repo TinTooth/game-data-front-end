@@ -59,8 +59,7 @@ const AllGamesGraphs = ({data}) => {
             topPublisherArrays.push(sortedPublishers[i])
         }
 
-
-        const topPublishersGraphData = [
+        let topPublishersGraphData = [
             ['Publisher','Wii','WiiU','PS3','PS4','X360','XOne'],
             ...topPublisherArrays
         ]
