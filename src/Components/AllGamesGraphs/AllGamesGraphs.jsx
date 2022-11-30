@@ -44,7 +44,6 @@ const AllGamesGraphs = ({data}) => {
                     case "PS3": ps3sum += game.globalsales;break;
                     case "X360": x360sum += game.globalsales;break;
                     case "Wii": wiisum += game.globalsales;break;
-            
                 }}
             )
             return [publisher,wiisum,wiiusum,ps3sum,ps4sum,x360sum,xonesum]
@@ -77,7 +76,7 @@ const AllGamesGraphs = ({data}) => {
     const publisherOptions = {
         width:"95%",
         height:"350px",
-        title: "Top 10 Publishers Sales Distribution by Platform 2005-2016",
+        title: "Top 10 Publishers Sales Distribution by Consoles 2005-2016",
         isStacked: "true",
         colors:["#4e0d0d","#8f1f1f","#292626","#807979","#ab6320","#f08b2e"],
     }
