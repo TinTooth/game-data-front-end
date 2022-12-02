@@ -12,3 +12,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "ZenDots-Regular";
+  src: url("./Fonts/ZenDots-Regular.ttf") format("truetype");
+}

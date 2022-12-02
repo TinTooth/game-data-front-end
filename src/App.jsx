@@ -2,7 +2,7 @@ import axios from 'axios';
 import './App.css';
 
 import Header from './Components/Header/Header';
-import { useState, useEffect} from 'react';
+import { useState, useEffect, useRef} from 'react';
 import SearchContainer from './Components/SearchContainer/SearchContainer';
 import GraphContainer from './Components/GraphContainer/GraphContainer';
 

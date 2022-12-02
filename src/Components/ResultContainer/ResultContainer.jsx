@@ -3,7 +3,7 @@ import SearchResult from "../SearchResult/SearchResult";
 
 const ResultContainer = ({results,setGame,noResults}) => {
     return results.length < 1 && noResults === true ? ( 
-    <div className="error"> Sorry No Results from that Search</div>  
+    <div className="error"> No Results from that Search</div>  
     ) : <div className="result-container">
         {results.map((game,i) =>{
         return(

@@ -5,7 +5,7 @@ import "./GraphContainer.css"
 const GraphContainer = ({game,data}) => {
     return (
         <div className="graph-container" >
-            {game ? (<GameGraph game = {game} data = {data}/>): <AllGamesGraphs data = {data}/>}
+            {game ? (<GameGraph game = {game} data = {data}/>): data.length ? (<AllGamesGraphs data = {data}/>):null}
         </div>
     )
 }

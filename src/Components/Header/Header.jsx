@@ -8,7 +8,7 @@ const Header = () => {
 
     return (  
         <div className="header">
-           <div className="brand" onClick = {handleClick}>Game Data</div> 
+           <div className="brand zen" onClick = {handleClick}>Game Data</div> 
         </div>
     
     );
