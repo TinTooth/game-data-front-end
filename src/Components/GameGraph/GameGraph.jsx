@@ -62,7 +62,6 @@ const GameGraph = ({game,data}) => {
         }
     }
 
-
     return ( 
         <>
         <div className="title1 zen">{game.name}</div>

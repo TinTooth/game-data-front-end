@@ -23,9 +23,8 @@ const SearchBar = ({data, setResults, setGame, setNoResults}) => {
     }
 
     const removeDuplicates = (games) =>{
-        const filteredGames = games.filter((game,i,games) => 
-        i === games.findIndex((g) => (
-            g.name === game.name)))
+        const filteredGames = games.filter((game,i) => 
+        i === games.findIndex((g) => (g.name === game.name)))
         return filteredGames;
     }
 
@@ -42,7 +41,7 @@ const SearchBar = ({data, setResults, setGame, setNoResults}) => {
         <div className="search-bar">
         <form onSubmit={handleSubmit}>
             <input type = "text" className="search-input" value={search} onChange ={(e)=> setSearch(e.target.value)} />
-            <button type = "submit">Search</button>
+            <button className="sbutton" type = "submit">Search</button>
         </form>
        
         <button onClick = {handleClear}>Clear</button>

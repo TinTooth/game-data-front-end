@@ -1,6 +1,5 @@
 .result-container>* { 
     flex:1 1 40%;
-    font-size: 25px;
 }
 
 .result {
@@ -18,6 +17,7 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    font-size: 25px;
 }
 
 .error {

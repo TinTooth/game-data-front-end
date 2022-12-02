@@ -29,7 +29,7 @@ const AllGamesGraphs = ({data}) => {
         let publishers = data.map(game =>{return game.publisher});
         let uniquePublishers = [...new Set(publishers)];
         let publisherArrays = uniquePublishers.map(publisher => {
-            let publishergames = filteredGames.filter(game => game.publisher == publisher);
+            let publishergames = filteredGames.filter(game => game.publisher === publisher);
             let ps4sum = 0;
             let xonesum = 0;
             let wiiusum = 0;
@@ -44,14 +44,24 @@ const AllGamesGraphs = ({data}) => {
                     case "PS3": ps3sum += game.globalsales;break;
                     case "X360": x360sum += game.globalsales;break;
                     case "Wii": wiisum += game.globalsales;break;
+                    default: break;
                 }}
             )
             return [publisher,wiisum,wiiusum,ps3sum,ps4sum,x360sum,xonesum]
         })
 
+        const getSum = (array) => {
+            let sum = 0;
+            for(let i = 1; i < 7; i++ ) {
+                sum +=array[i];
+            }
+            return sum
+        }
+
+
         let sortedPublishers = publisherArrays.sort((p1,p2) =>
-        ((p1[1]+p1[2]+p1[3]+p1[4]+p1[5]+p1[6])<(p2[1]+p2[2]+p2[3]+p2[4]+p2[5]+p2[6])) ? 1 :
-        ((p1[1]+p1[2]+p1[3]+p1[4]+p1[5]+p1[6])>(p2[1]+p2[2]+p2[3]+p2[4]+p2[5]+p2[6])) ? -1 : 0);
+        ((getSum(p1))<(getSum(p2))) ? 1 :
+        ((getSum(p1))>(getSum(p2))) ? -1 : 0);
         
         let topPublisherArrays = []
         for (let i = 0; i <10; i++) {
@@ -83,8 +93,7 @@ const AllGamesGraphs = ({data}) => {
         backgroundColor: "transparent",
         
     }
-
-        
+    
     return (  
         <>
             <Chart
